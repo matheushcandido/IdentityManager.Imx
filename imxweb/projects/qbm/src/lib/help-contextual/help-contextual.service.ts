@@ -203,6 +203,7 @@ export const HELP_CONTEXTUAL = {
   ProfileMultipleIdentities: 'profile-multiple-identities',
   Addressbook: 'addressbook',
   ProcessingQueue: 'processing-queue',
+  SampleIdentities: 'sample-identities',
 } as const;
 type ObjectValues<T> = T[keyof T];
 export type HelpContextualValues = ObjectValues<typeof HELP_CONTEXTUAL>;

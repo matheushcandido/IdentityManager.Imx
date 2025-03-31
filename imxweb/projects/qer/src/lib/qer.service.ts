@@ -32,6 +32,7 @@ import { ProductDependencyCheckComponent } from './shopping-cart-validation-deta
 import { ShoppingCartValidationDetailService } from './shopping-cart-validation-detail/shopping-cart-validation-detail.service';
 import { ClassloggerService, ExtService } from 'qbm';
 import { QueueStatusComponent } from './queue/queue-status/queue-status.component';
+import { IdentityTileComponent } from '../public_api';
 
 @Injectable({
   providedIn: 'root',
@@ -51,5 +52,6 @@ export class QerService {
     this.extService.register('queueMastButton', {
       instance: QueueStatusComponent,
     });
+    this.extService.register('Dashboard-MediumTiles', {instance: IdentityTileComponent})
   }
 }

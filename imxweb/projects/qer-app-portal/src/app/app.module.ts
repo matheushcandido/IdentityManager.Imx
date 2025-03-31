@@ -73,6 +73,7 @@ import {
   RiskConfigModule,
   RoleManangementModule,
   RoleMembershipsModule,
+  SampleIdentityModule,
   ServiceCategoriesModule,
   ServiceItemsEditModule,
   ShoppingCartModule,
@@ -155,6 +156,7 @@ export function getBaseHref(): string {
     SourceDetectiveModule,
     RoleMembershipsModule,
     QueueStatusComponent,
+    SampleIdentityModule
   ],
   providers: [
     { provide: 'environment', useValue: environment },

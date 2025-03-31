@@ -1,0 +1,14 @@
+:host {
+
+    ::ng-deep .mat-tab-group {
+        height: 100%;
+    }
+
+    ::ng-deep .mat-tab-body{
+        padding: 10px 0 10px 0;
+    }
+
+    ::ng-deep .eui-sidesheet-content {
+        overflow: hidden;
+    }
+}

@@ -211,3 +211,7 @@ export { ViewDevicesSidesheetComponent } from './lib/view-devices/view-devices-s
 export { ViewDevicesModule } from './lib/view-devices/view-devices.module';
 export { DashboardService } from './lib/wport/start/dashboard.service';
 export { StartComponent } from './lib/wport/start/start.component';
+export { SampleIdentitiesComponent } from './lib/sample-identity/sample-identities/sample-identities.component';
+export { SampleIdentityModule } from './lib/sample-identity/sample-identity.module';
+export { SampleIdentityDetailsComponent } from './lib/sample-identity/sample-identity-details/sample-identity-details.component';
+export { IdentityTileComponent } from './lib/sample-identity/identity-tile/identity-tile.component';

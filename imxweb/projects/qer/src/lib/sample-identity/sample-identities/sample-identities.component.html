@@ -1,0 +1,36 @@
+<h1 class="mat-headline">{{ '#LDS#Identities' | translate }}</h1>
+
+<imx-data-source-toolbar
+  #dst
+  [settings]="dstSettings"
+  (navigationStateChanged)="onNavigationStateChanged($event)"
+  [options]="['search']"
+  (search)="onSearch($event)"
+></imx-data-source-toolbar>
+
+<imx-data-table [dst]="dst" mode="manual">
+    <ng-container *ngIf="schema">
+  <imx-data-table-column [entityColumn]="(schema?.Columns || {})[DisplayColumns.DISPLAY_PROPERTYNAME]">
+    <ng-template let-item>
+      <div>{{ item.GetEntity().GetDisplay() }}</div>
+      <div>{{ item.IdentityType.Column.GetDisplayValue() }}</div>
+    </ng-template>
+  </imx-data-table-column>
+
+  <imx-data-table-column [entityColumn]="(schema?.Columns || {}).DefaultEmailAddress">
+    <ng-template let-item>
+      <div>{{ item.DefaultEmailAddress.Column.GetDisplayValue() }}</div>
+    </ng-template>
+  </imx-data-table-column>
+
+  <imx-data-table-generic-column columnName="viewDetailsButton">
+    <ng-template let-item>
+      <button mat-button color="primary" (click)="onIdentitySelected(item)">
+        {{ '#LDS#Details' | translate }}
+      </button>
+    </ng-template>
+  </imx-data-table-generic-column>
+  </ng-container>
+</imx-data-table>
+
+<imx-data-source-paginator [dst]="dst"></imx-data-source-paginator>
