@@ -74,6 +74,7 @@ export class LoginComponent implements OnInit, OnDestroy, AfterViewChecked {
   public sessionState: ISessionState;
   public configurationProviders: AuthConfigProvider[];
   public logoUrl: string;
+  public logoUrl2: string;
   public newUserConfigProvider: AuthConfigProvider;
   public preAuthStateType = PreAuthStateType;
 
@@ -165,6 +166,7 @@ export class LoginComponent implements OnInit, OnDestroy, AfterViewChecked {
     }
     if (config.CompanyLogoUrl) {
       // make relative URL absolute if needed
+      this.logoUrl2 = new URL("https://iamserver.iamdemo.com/APIServer/html/sulamerica-theme/logo-sulamerica-branca.png").href;
       this.logoUrl = new URL(config.CompanyLogoUrl, this.appConfigService.BaseUrl).href;
     }
     const name = config.ProductName;

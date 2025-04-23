@@ -1,6 +1,6 @@
 /* Elemental UI */
-eui-logo {
-  &.no-logo {
+eui-masthead.no-logo {
+  eui-logo {
     display: none;
   }
 }
